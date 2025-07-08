@@ -135,6 +135,7 @@
                 return;
         }
 
+
         Console.Write($"Su'aal: {question} = ");
         int userAns = int.Parse(Console.ReadLine());
 
