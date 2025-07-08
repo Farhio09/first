@@ -138,6 +138,7 @@
         Console.Write($"Su'aal: {question} = ");
         int userAns = int.Parse(Console.ReadLine());
 
+
         bool isCorrect = userAns == correctAns;
         int score = isCorrect ? 10 : 0;
         string level = isCorrect ? "Excellent" : "Needs Improvement";
