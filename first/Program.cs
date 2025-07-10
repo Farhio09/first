@@ -64,88 +64,112 @@
 
 //int tiro;
 //Random qulxin = new Random(); // random object
-// function to generate a random number between 1 and 50
+//function to generate a random number between 1 and 50
 
 
 //int loop;
 //for (loop = 1; loop <= 10; loop++)
 //{
-//    tiro = qulxin.Next(1, 50);
-//    Console.WriteLine(tiro);
+//tiro = qulxin.Next(1, 50);
+//Console.WriteLine(tiro);
 
 //}
 
 
 //int tiro;
-//int iskuday = 0; 
+//int iskuday = 0;
 //Random qulxin = new Random(); // Object Random
 
 //int loop;
 //for (loop = 1; loop <= 10; loop++)
 //{
-//    tiro = qulxin.Next(1, 50); // Random 1 ilaa 49
-//    Console.WriteLine(loop+"\t\t"+tiro);
-//    iskuday = iskuday + tiro;
+//tiro = qulxin.Next(1, 50); // Random 1 ilaa 49
+//Console.WriteLine(loop + "\t\t" + tiro);
+//iskuday = iskuday + tiro;
 
 //}
-//Console.WriteLine("iskudarka" +iskuday);
+//Console.WriteLine("iskudarka" + iskuday);
 
-        Random r = new Random();
+//using System;
 
-        Console.Write("Magaca: ");
-        string name = Console.ReadLine();
+//class Program
+//{
+//    static void Main()
+//    {
+//        Random r = new Random();
 
-        Console.Write("ID: ");
-        string id = Console.ReadLine();
+//        Console.Write("Magaca: ");
+//        string name = Console.ReadLine();
 
-        Console.WriteLine("\nDooro nooca xisaabta:");
-        Console.WriteLine("1. Kudar\n2. Kajar\n3. Kudhufo\n4. Uqeybi");
-        Console.Write("Xulo (1-4): ");
-        int choice = int.Parse(Console.ReadLine());
+//        Console.Write("ID: ");
+//        string id = Console.ReadLine();
 
-        string operation = "";
-        int a = r.Next(1, 20), b = r.Next(1, 10), correctAns = 0;
-        string question = "";
+//        int totalScore = 0;
 
-        switch (choice)
-        {
-            case 1:
-                operation = "Kudar";
-                correctAns = a + b;
-                question = $"{a} + {b}";
-                break;
-            case 2:
-                operation = "Kajar";
-                correctAns = a - b;
-                question = $"{a} - {b}";
-                break;
-            case 3:
-                operation = "Kudhufo";
-                correctAns = a * b;
-                question = $"{a} * {b}";
-                break;
-            case 4:
-                operation = "Uqeybi";
-                while (b == 0) b = r.Next(1, 10);
-                correctAns = a / b;
-                question = $"{a} / {b}";
-                break;
-            default:
-                Console.WriteLine("Doorasho khaldan.");
-                return;
-        }
+//        Console.WriteLine("\n------ Natiijooyinka ------");
+//        Console.WriteLine("ID\tMagac\tNooc\tSu'aal\tJwb Sax\tJwb User\tSax\tScore\tHeer");
 
+//        for (int i = 1; i <= 10; i++)
+//        {
+//            Console.WriteLine($"\nSu’aal {i}: Dooro nooca xisaabta:");
+//            Console.WriteLine("1. Kudar\n2. Kajar\n3. Kudhufo\n4. Uqeybi");
+//            Console.Write("Xulo (1-4): ");
+//            int choice = int.Parse(Console.ReadLine());
 
-        Console.Write($"Su'aal: {question} = ");
-        int userAns = int.Parse(Console.ReadLine());
+//            string operation = "";
+//            int a = r.Next(1, 20);
+//            int b = r.Next(1, 10);
+//            int correctAns = 0;
+//            string question = "";
 
+//            switch (choice)
+//            {
+//                case 1:
+//                    operation = "Kudar";
+//                    correctAns = a + b;
+//                    question = $"{a} + {b}";
+//                    break;
+//                case 2:
+//                    operation = "Kajar";
+//                    correctAns = a - b;
+//                    question = $"{a} - {b}";
+//                    break;
+//                case 3:
+//                    operation = "Kudhufo";
+//                    correctAns = a * b;
+//                    question = $"{a} * {b}";
+//                    break;
+//                case 4:
+//                    operation = "Uqeybi";
+//                    while (b == 0) b = r.Next(1, 10);
+//                    correctAns = a / b;
+//                    a = correctAns * b; // si jawaab integer u noqoto
+//                    question = $"{a} / {b}";
+//                    break;
+//                default:
+//                    Console.WriteLine("Doorasho khaldan, su’aashan waa la dhaafay.");
+//                    continue;
+//            }
 
-        bool isCorrect = userAns == correctAns;
-        int score = isCorrect ? 10 : 0;
-        string level = isCorrect ? "Excellent" : "Needs Improvement";
+//            Console.Write($"Su’aal: {question} = ");
+//            int userAns = int.Parse(Console.ReadLine());
 
-        // Natiijo Table
-        Console.WriteLine("\n------ Natiijada ------");
-        Console.WriteLine("ID\tMagac\tNooc\tSu'aal\tJwb Sax\tJwb User\tSax\tScore\tHeer");
-        Console.WriteLine($"{id}\t{name}\t{operation}\t{question}\t{correctAns}\t{userAns}\t\t{(isCorrect ? "Haa" : "Maya")}\t{score}/10\t{level}");
-    
+//            bool isCorrect = userAns == correctAns;
+//            int score = isCorrect ? 10 : 0;
+//            string level = isCorrect ? "Excellent" : "Needs Improvement";
+//            totalScore += score;
+
+//            Console.WriteLine($"{id}\t{name}\t{operation}\t{question}\t{correctAns}\t{userAns}\t\t{(isCorrect ? "Haa" : "Maya")}\t{score}/10\t{level}");
+//        }
+
+//        Console.WriteLine($"\nWadar Score: {totalScore}/100");
+//    }
+//}
+
+//public int iskudar(int a,int b)
+//{
+//    int c;
+//    c = a + b;
+//    return c;
+//}
+//Console.WriteLine(iskudar(int a, int b));
